@@ -9,12 +9,12 @@ app = Flask(__name__)
 @app.route("/") 
 def hello(): 
     message = "Hello, World"
-    return render_template('rss_server.html',  
+    return render_template('custom.xml',  
                            message=message) 
 
 @app.route("/feed")
 def feed():
-    return render_template('custom.xml')
+    return render_template('game.xml')
 
 @app.route("/admin")
 def admin():
