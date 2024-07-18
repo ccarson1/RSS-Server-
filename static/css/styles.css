@@ -15,7 +15,7 @@ body {
     margin-left: 1.2rem;
 }
 #btnConnect:hover{
-    background-color: #82f09f;
+    background-color: #86a8db;
     border-color: white;
     color: white;
     transition: .5s;
@@ -47,7 +47,7 @@ body {
     border-radius: 10px;
 }
 .driveBox:hover{
-    color:#82f09f;
+    color:#86a8db;
 
     opacity: .5;
     transition: .5s;
@@ -109,7 +109,7 @@ body {
     transition: .5s;
 }
 #btnDragAndDrop:hover{
-    color:#82f09f;
+    color:#86a8db;
 
     opacity: .5;
     transition: .5s;
@@ -127,7 +127,7 @@ body {
     transition: .5s;
 }
 #btnRefresh:hover{
-    color:#82f09f;
+    color:#86a8db;
 
     opacity: .5;
     transition: .5s;
@@ -151,7 +151,7 @@ table{
 
 }
 .btn-list-item:hover{
-    color:#82f09f;
+    color:#86a8db;
 
     opacity: .5;
     transition: .5s;

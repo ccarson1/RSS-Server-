@@ -7,16 +7,49 @@ let btnUpload = document.getElementById("btnUpload");
 let fileChosen = document.getElementById("fileChosen");
 let driveBoxes = document.getElementsByClassName("driveBox");
 
-function uploadFiles(){
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-        if(this.readyState === 4 && this.status == 200){
-            const response = JSON.parse(this.responseText)
-            console.log(response["1forge.com"]);
-        }
-    };
-    xhttp.open("Get", "https://api.apis.guru/v2/list.json", true);
-    xhttp.send();
+let file;
+
+// function uploadFiles(){
+//     let xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function(){
+//         if(this.readyState === 4 && this.status == 200){
+//             const response = JSON.parse(this.responseText)
+//             console.log(response["1forge.com"]);
+//         }
+//     };
+//     xhttp.open("Get", "https://api.apis.guru/v2/list.json", true);
+//     xhttp.send();
+// }
+
+
+
+function uploadFiles() {
+    var fileInput = document.getElementById('inputId');
+    var file = fileInput.files[0];
+
+    if (file) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://127.0.0.1:5000/admin', true);
+        xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+        xhr.setRequestHeader('X-Filename', file.name);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                alert('File uploaded successfully!');
+                fileInput.value = '';
+            } else {
+                alert('File upload failed!');
+            }
+
+        };
+
+        var reader = new FileReader();
+        reader.onload = function (event) {
+            var blob = new Blob([event.target.result]);
+            xhr.send(blob);
+        };
+        reader.readAsArrayBuffer(file);
+    }
 }
 
 function deleteFile(){
@@ -29,21 +62,6 @@ function deleteFile(){
         });
     }
     
-}
-
-function listItems(){
-    for(let x=0; x<filelist.length; x++){
-        console.log(filelist[x].children[0].textContent);
-        filelist[x].addEventListener("click", () => {
-            alert("Opening " + filelist[x].children[0].textContent);
-        });
-        filelist[x].addEventListener("mouseover", () => {
-           filelist[x].children[1].style.display = "flex";
-        });
-        filelist[x].addEventListener("mouseout", () => {
-            filelist[x].children[1].style.display = "none";
-         });
-    }
 }
 
 
@@ -70,7 +88,7 @@ btnSubmit.addEventListener("click", () => {
     dropbox.style.display = "none";
     btnSubmit.style.display = "none";
     btnCancel.style.display = "none";
-    uploadFiles();
+    uploadFiles(file);
 });
 
 for(let x=0; x<driveBoxes.length; x++){
@@ -84,6 +102,46 @@ for(let x=0; x<driveBoxes.length; x++){
 document.getElementById("inputId").addEventListener("change", () => {
     
     fileChosen.textContent = document.getElementById("inputId").files[0].name;
+    file = fileChosen;
   
 });
+
+function dropHandler(ev) {
+    console.log("File(s) dropped");
+  
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+  
+    if (ev.dataTransfer.items) {
+      // Use DataTransferItemList interface to access the file(s)
+      [...ev.dataTransfer.items].forEach((item, i) => {
+        // If dropped items aren't files, reject them
+        if (item.kind === "file") {
+          const file = item.getAsFile();
+          console.log(`… file[${i}].name = ${file.name}`);
+        }
+      });
+    } else {
+      // Use DataTransfer interface to access the file(s)
+      [...ev.dataTransfer.files].forEach((file, i) => {
+        console.log(`… file[${i}].name = ${file.name}`);
+      });
+    }
+  }
+
+  function dragOverHandler(ev) {
+    console.log("File(s) in drop zone");
+  
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+  }
+
+  function listItems(){
+    var fileList = document.getElementById('fileList');
+    data.forEach(function(file) {
+        var listItem = document.createElement('li');
+        listItem.textContent = file;
+        fileList.appendChild(listItem);
+    });
+  }
 
