@@ -6,11 +6,11 @@ RSS Server interface to update the rss feeds for a magic mirror
 1. Click Code > download.zip
 2. Extract zip folder
 3. Open a cmd console in the extracted folders location
-   You should see the files and folders (static, templates, rss_server.py)
+   #You should see the files and folders (static, templates, rss_server.py)
 5. !Make sure that python is installed!: python --version
 6. Create a python environment: python -m venv env
-   You may have to use (py, py3 or python3)
-   You could install virtualenv as an alternative
+   #You may have to use (py, py3 or python3)
+   #You could install virtualenv as an alternative
 8. Start the python environment: python env\Scripts\activate
 9. Install flask: pip install flask
 11. Make sure you are in the same directory as the rss_server.py
