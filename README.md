@@ -12,7 +12,7 @@ RSS Server interface to update the rss feeds for a magic mirror
 9. Install flask: pip install flask
 11. Make sure you are in the same directory as the rss_server.py
 12. Run flask server: flask --app rss_server --debug run
-13. Open the browser and go to [http](http://127.0.0.1:5000/admin)
+13. Open the browser and go to (http://127.0.0.1:5000/admin)
 
 
 
