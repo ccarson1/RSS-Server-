@@ -1,4 +1,5 @@
 let dd_btn = document.getElementById("btnDragAndDrop");
+let bp_label = document.getElementById("lbl-plus");
 let dropbox = document.getElementById("dropbox");
 let btnSubmit = document.getElementById("btnSubmit");
 let btnCancel = document.getElementById("btnCancel");
@@ -47,6 +48,7 @@ function listItems(){
 
 
 dd_btn.addEventListener("click", () => {
+    bp_label.style.display = "none"
     dd_btn.style.display = "none";
     dropbox.style.display = "block";
     btnSubmit.style.display = "block";
@@ -54,6 +56,7 @@ dd_btn.addEventListener("click", () => {
 });
 
 btnCancel.addEventListener("click", () => {
+    bp_label.style.display = "block"
     dd_btn.style.display = "block";
     dropbox.style.display = "none";
     btnSubmit.style.display = "none";
@@ -62,6 +65,7 @@ btnCancel.addEventListener("click", () => {
 });
 
 btnSubmit.addEventListener("click", () => {
+    bp_label.style.display = "block"
     dd_btn.style.display = "block";
     dropbox.style.display = "none";
     btnSubmit.style.display = "none";

@@ -5,31 +5,6 @@ body {
 }
 
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    padding: 1.2rem;
-}
-nav ul p{
-    padding: .2rem;
-    margin-left: 5rem;
-}
-
-nav ul li:hover {
-    opacity: .5;
-    background-color: orangered;
-}
-nav ul #btnMenu{
-    margin-left: 40%;
-    margin-top: 1%;
-    font-size: 2.2rem;
-    display: none;
-}
 #btnConnect{
     background-color: #13cf0c;
     padding: .5rem;
@@ -237,3 +212,29 @@ footer{
     color: white;
     padding: 2%;
 }
+.list-ref{
+    text-decoration: none;
+    color: black
+}
+.list-ref:hover{
+    opacity: .5;
+}
+
+
+@keyframes rsslogo-on {
+    from {opacity: 1;}
+    to {opacity: .5;}
+    
+  }
+
+  #imglogo{
+    animation-name: rsslogo-on;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  #cur-xml{
+    animation-name: rsslogo-on;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }

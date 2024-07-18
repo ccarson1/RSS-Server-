@@ -15,32 +15,36 @@
 <body>
     <nav class="navbar" style="background-color: rgb(92, 89, 89);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="static\images\rss-logo-svg-vector.svg" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">
+                    class="d-inline-block align-text-top" id="imglogo">
                 RSS Server
+                
             </a>
+            
         </div>
+        <small style="color: #86a8db; margin-left: 1%;" id="cur-xml"> Tech Club.xml</small>
     </nav>
     <div id="container" style="margin: 5%;">
-        <h5>Current Magic Mirror Feed:</h5><p> Tech Club.xml</p>
+        <h5>Current Magic Mirror Feed:</h5><p style="color: #0d6efd;"> Tech Club.xml</p>
 
     </div>
-    <div class="container" style="width: 80%; margin-top: 5%;">
+    <hr>
+    <div class="container" style="width: 80%; margin-top: 2%;">
         <div id="fileListButtons">
             <div>
-                <p>New Feed</p>
+                <p id="lbl-plus">New Feed</p>
                 <div id="btnDragAndDrop">
                     +
                 </div>
             </div>
 
-            <div>
+            <!-- <div>
                 <p>Refresh Folder</p>
                 <div id="btnRefresh">
                     <i class="fa-solid fa-arrows-rotate"></i>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -58,24 +62,34 @@
             <label class="btn btn-success" for="inputId" id="btnUpload">Choose</label>
             <p id="fileChosen">No File Chosen...</p>
         </div>
-        <h2 class="text-center mt-3 mb3">XML File Feeds</h2>
+        <h2 class="text-center" style="margin-top: 2%; margin-bottom: 5%;">XML File Feeds</h2>
+        <hr>
         <table class="table table-hover">
 
             <tr >
-                <td colspan="4" onclick="console.log('selected');" style="width: 80%">Games News.xml</td>
+                <td colspan="4" onclick="console.log('selected');" style="width: 80%"><a href="/feed" class="list-ref">Games News.xml</a><i class="fa-solid fa-file-arrow-down"></i></td>
                     <td></td>
                     <td><button class="btn-list-item" onclick="console.log('set');" >Set</button></td>
                     <td><button class="btn-list-item" onclick="console.log('update');" >Update</button></td>
-                    <td><button class="btn-list-item" onclick="console.log('Deleted');" >Delete</button></td>
+                    <td><button class="btn-list-item" onclick="console.log('Deleted');" ><i class="fa-solid fa-xmark"></i></button></td>
             </tr>
             <tr >
                 <td colspan="4" onclick="console.log('selected');" style="width: 80%">Tech Club News.xml</td>
                     <td></td>
                     <td><button class="btn-list-item" onclick="console.log('set');" >Set</button></td>
                     <td><button class="btn-list-item" onclick="console.log('update');" >Update</button></td>
-                    <td><button class="btn-list-item" onclick="console.log('Deleted');" >Delete</button></td>
+                    <td><button class="btn-list-item" onclick="console.log('Deleted');" ><i class="fa-solid fa-xmark"></i></button></td>
             </tr>
         </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
         <!-- <div id="fileList">
             <div class="fileItemContainer ">
                 <div class="fileItem">
@@ -99,9 +113,9 @@
 
 
     <footer style="text-align: center; display: block; font-size: .7rem; padding-top: 2%;">
-        <div>
+        <!-- <div>
             <small>Created By: Craig E Carson</small>
-        </div>
+        </div> -->
         <div>
             <small>Date: 1/11/2024</small>
         </div>
