@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+    <title>Custom Feed</title>
+    <pubDate>Wed, 17 Jul 2024 14:00:00 CDT</pubDate>
+    <creator>Wesley LeBlanc</creator>
+    <guid isPermaLink="false">123100</guid>
+    <language>en</language>
+    <description>This is the custom rss feed</description>
+        
+</channel>
+</rss>

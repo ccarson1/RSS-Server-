@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 1.2rem;
+}
+nav ul p{
+    padding: .2rem;
+    margin-left: 5rem;
+}
+
+nav ul li:hover {
+    opacity: .5;
+    background-color: orangered;
+}
+nav ul #btnMenu{
+    margin-left: 40%;
+    margin-top: 1%;
+    font-size: 2.2rem;
+    display: none;
+}
+#btnConnect{
+    background-color: #13cf0c;
+    padding: .5rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: .5s;
+    margin-top: .8rem;
+    margin-left: 1.2rem;
+}
+#btnConnect:hover{
+    background-color: #82f09f;
+    border-color: white;
+    color: white;
+    transition: .5s;
+}
+
+#breadCrumb ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+#breadCrumb ul li a{
+    text-decoration: none;
+    color: black;
+}
+#breadCrumb ul li a:hover{
+    text-decoration: underline;
+    opacity: .5;
+    color: #0b3a18;
+
+}
+#driveList{
+    display: flex;
+}
+.driveBox{
+    background-color: #ff6007;
+    width: 5rem;
+    padding: 1.5rem;
+    margin: 1.2rem;
+    border-radius: 10px;
+}
+.driveBox:hover{
+    color:#82f09f;
+
+    opacity: .5;
+    transition: .5s;
+}
+#dropbox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: 300px;
+    border: 1px dashed black;
+    transition: .5s;
+    display: none;
+}
+
+#dropbox:hover {
+    background-color: lightgray;
+    opacity: .5;
+    transition: .5s;
+    
+}
+
+#dropbox label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    width: 20%;
+    /* background-color: #ff6007;
+    padding: 1.2%;
+    border-radius:5px; */
+    text-align:center;
+    justify-content: center;
+    
+    
+}
+#dropbox label:hover{
+    opacity: 2;
+    color: black
+    
+}
+#fileChosen{
+    text-align: center;
+    font-size: .8rem;
+}
+#fileListButtons{
+    display: flex;
+}
+#btnDragAndDrop{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    background-color: #ff6007;
+    width: fit-content;
+    height:max-content;
+    margin: 3%;
+    padding: 0rem 1.2rem .5rem 1.2rem;
+    border-radius: 5px;
+    transition: .5s;
+}
+#btnDragAndDrop:hover{
+    color:#82f09f;
+
+    opacity: .5;
+    transition: .5s;
+}
+#btnRefresh{
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    background-color: #ff6007;
+    width: fit-content;
+    height:max-content;
+    margin: 3%;
+    padding: 0rem 1.2rem .5rem 1.2rem;
+    border-radius: 5px;
+    transition: .5s;
+}
+#btnRefresh:hover{
+    color:#82f09f;
+
+    opacity: .5;
+    transition: .5s;
+}
+table{
+  
+    border-collapse: collapse;
+}
+
+
+.btn-list-item{
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #ff6007;
+    width: fit-content;
+    height:max-content;
+    border: none;
+    padding: .2rem 1rem .2rem 1rem;
+    border-radius: 5px;
+    transition: .5s;
+
+}
+.btn-list-item:hover{
+    color:#82f09f;
+
+    opacity: .5;
+    transition: .5s;
+}
+#btnNewFileControls{
+    margin-left: 75%;
+}
+#fileListButtons div{
+    text-align: center;
+    margin: 4%;
+}
+#btnSubmit{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: #ff6007;
+    width: fit-content;
+    padding: .5rem;
+    border-radius: 8%;
+    transition: .5s;
+    margin: 5%;
+    display: none;
+    margin-bottom: 10%;
+}
+#btnSubmit:hover{
+    opacity: .5;
+    transition: .5s;
+    color:white;
+
+}
+#btnCancel{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: #dc3545;
+    width: fit-content;
+    padding: .5rem;
+    border-radius: 8%;
+    transition: .5s;
+    margin: 5%;
+    display: none;
+    margin-bottom: 10%;
+}
+#btnCancel:hover{
+    background-color: rgb(196, 44, 44);
+    opacity: .5;
+    transition: .5s;
+}
+
+
+#btnNewFileControls{
+    display: flex;
+    padding: 0;
+}
+footer{
+    position: relative;
+    background-color: #343a40;
+    width: 100%;
+    margin-top: 59vh;
+    color: white;
+    padding: 2%;
+}
